@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Master.GodView"
+             BackgroundColor="GhostWhite">
+    <ContentPage.Content>
+        <ScrollView>
+            <Grid ColumnSpacing="2" Padding="5" Margin="5">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="250"/>
+                    <RowDefinition Height="45"/>
+                    <RowDefinition Height="45"/>
+                    <RowDefinition Height="45"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="70"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="100"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Image x:Name="gdImage" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"/>
+                <Label Text="Назва товару: " FontSize="Medium" TextColor="Black" VerticalOptions="Center" Grid.Row="1" Grid.Column="0"/>
+                <Label x:Name="gdName" Grid.Row="1" Grid.Column="1" FontSize="Medium" TextColor="Black" VerticalOptions="Center" HorizontalOptions="FillAndExpand"/>
+                <Label Text="Ціна за шт (грн): "  FontSize="Medium" TextColor="Black" VerticalOptions="Center" Grid.Row="2" Grid.Column="0"/>
+                <Label x:Name="gdPrice" Grid.Row="2" Grid.Column="1" FontSize="Medium" TextColor="Black" VerticalOptions="Center" HorizontalOptions="FillAndExpand"/>
+                <Label Text="Кількість на складі: " FontSize="Medium" TextColor="Black" VerticalOptions="Center" Grid.Row="3" Grid.Column="0"/>
+                <Label x:Name="gdAmount" Grid.Row="3" Grid.Column="1" FontSize="Medium" TextColor="Black" VerticalOptions="Center" HorizontalOptions="FillAndExpand"/>
+                <Label x:Name="gdDescription" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2"  FontSize="Medium" TextColor="Black" HorizontalOptions="FillAndExpand" LineBreakMode="WordWrap"/>
+                <Picker x:Name="picker" Grid.Row="5" Grid.Column="0"/>
+                <Button x:Name="Buy" Text="Buy" Grid.Row="5" Grid.Column="1" Clicked="BuyButtonClicked"/>
+            </Grid>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

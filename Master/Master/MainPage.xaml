@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Master"
+             x:Class="Master.MainPage"
+             Title="Master">
+
+    <MasterDetailPage.Master>
+        <ContentPage Title="Master Max" BackgroundColor="LawnGreen">
+            <ContentPage.Content>
+                <StackLayout Padding="5,10,5,1">
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" Margin="5,0,0,0">
+                        <Image HeightRequest="55" WidthRequest="55" Aspect="AspectFit" Source="logo.png" VerticalOptions="Center"></Image>
+                        <Label TextColor="Black" FontSize="Large" Text="Master Tools" VerticalOptions="Center" HorizontalTextAlignment="Center"></Label>                       
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                        <Button BackgroundColor="White" BorderRadius="0" BorderWidth="0" Text="Головна" Clicked="ButtonMain_Click" HorizontalOptions="FillAndExpand"></Button>
+                        <Image HeightRequest="24" WidthRequest="24" Aspect="AspectFit" Source="home.png" HorizontalOptions="Start"></Image>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                        <Button BackgroundColor="White" Text="Акції"  BorderRadius="0" BorderWidth="0" Clicked="ButtonSales_Click"  HorizontalOptions="FillAndExpand"></Button>
+                        <Image HeightRequest="24" WidthRequest="24" Aspect="AspectFit" Source="sale.png" HorizontalOptions="Start"></Image>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                        <Button BackgroundColor="White" Text="Категорії товарів" BorderRadius="0" BorderWidth="0" Clicked="ButtonCategories_Click" HorizontalOptions="FillAndExpand"></Button>
+                        <Image HeightRequest="24" WidthRequest="24" Aspect="AspectFit" Source="tool.png" HorizontalOptions="Start"></Image>
+                    </StackLayout>
+                </StackLayout>
+            </ContentPage.Content>
+        </ContentPage>
+    </MasterDetailPage.Master>
+
+    <MasterDetailPage.Detail>
+        <ContentPage>
+            <ContentPage.Content>
+                <Label Text="DetailPage" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"></Label>
+            </ContentPage.Content>
+        </ContentPage>
+    </MasterDetailPage.Detail>
+</MasterDetailPage>

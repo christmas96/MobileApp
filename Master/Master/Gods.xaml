@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Master.Gods"
+             Title="Gods">
+    <ContentPage.Content>
+        <ListView  x:Name="ListView1">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout BackgroundColor="GhostWhite"	Orientation="Vertical">
+                            <StackLayout Orientation="Horizontal">
+                                <Image Source="{Binding image}" WidthRequest="55" HeightRequest="55"/>
+                                <Label Text="{Binding title}" FontSize="Medium" VerticalOptions="FillAndExpand" TextColor="#f35e20" />
+                                <Label Text="{Binding price}" FontSize="Medium" HorizontalOptions="EndAndExpand" TextColor="#503026" />
+                            </StackLayout>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </ContentPage.Content>
+</ContentPage>
